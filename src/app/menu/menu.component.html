@@ -1,0 +1,22 @@
+<div class="container" fxLayout="column" fxLayoutGap="10px">
+    <div fxFlex>
+        <div>
+            <h1 style="font-weight: bold;">Menu</h1>
+            <hr>
+        </div>
+
+    </div>
+
+    <div fxFlex>
+        <mat-grid-list cols="2" rowHeight="200px">
+            <mat-grid-tile *ngFor="let dish of dishes">
+                <img src={{dish.image}} alt={{dish.name}}>
+                <mat-grid-tile-footer>
+                    <h1>{{dish.name | uppercase}}</h1>
+                </mat-grid-tile-footer>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+</div>
+<app-dishdetail></app-dishdetail>

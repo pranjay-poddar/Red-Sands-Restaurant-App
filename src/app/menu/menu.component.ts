@@ -1,4 +1,4 @@
-import { Dish } from './../shared/dish';
+import { Dish } from '../shared/dish';
 import { Component, OnInit } from '@angular/core';
 
 const DISHES:Dish[] =[
@@ -39,11 +39,11 @@ const DISHES:Dish[] =[
     description : 'an amazing zucchipakoda'}
 ];
 @Component({
-  selector: 'app-view',
-  templateUrl: './view.component.html',
-  styleUrls: ['./view.component.scss']
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss']
 })
-export class ViewComponent implements OnInit {
+export class MenuComponent implements OnInit {
 dishes:Dish[]= DISHES;
 selectedDish:Dish = DISHES[0];
   constructor() { }

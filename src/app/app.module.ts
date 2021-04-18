@@ -10,11 +10,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import 'hammerjs';
-import { ViewComponent } from './view/view.component';
+import { MenuComponent } from './menu/menu.component';
+import { DishdetailComponent } from './dishdetail/dishdetail.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ViewComponent
+    MenuComponent,
+    DishdetailComponent
   ],
   imports: [
     BrowserModule,
