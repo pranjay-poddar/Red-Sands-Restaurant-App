@@ -1,3 +1,11 @@
 .mat-list-base .mat-list-item {
     color: black;
 }
+
+p .para {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    box-sizing: border-box;
+}

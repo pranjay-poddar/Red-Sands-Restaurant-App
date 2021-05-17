@@ -8,7 +8,7 @@
     </div>
 
     <div fxFlex>
-        <mat-grid-list cols="2" rowHeight="200px">
+        <mat-grid-list cols="2" rowHeight="250px">
             <mat-grid-tile *ngFor="let dish of dishes" (click)="onSelect(dish)">
                 <img height="200px" src={{dish.image}} alt={{dish.name}}>
                 <mat-grid-tile-footer>
