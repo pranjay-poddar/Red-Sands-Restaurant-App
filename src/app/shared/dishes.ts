@@ -4,8 +4,8 @@ export const DISHES: Dish[] = [
     
  {
         id: '0',
-        name: 'Uthappizza',
-        image: '/assets/images/uthappizza.png',
+        name: 'Pizza',
+        image: './assets/images/uthappizza.png',
         category: 'mains',
         featured: true,
         label: 'Hot',
@@ -15,26 +15,26 @@ export const DISHES: Dish[] = [
         comments: [
             {
                 rating: 5,
-                comment: 'Imagine all the eatables, living in conFusion!',
-                author: 'John Lemon',
+                comment: 'It was really awesome! Kudos to the chef',
+                author: 'Pranjay Poddar',
                 date: '2012-10-16T17:57:28.556094Z'
             },
             {
                 rating: 4,
                 comment: 'Sends anyone to heaven, I wish I could get my mother-in-law to eat it!',
-                author: 'Paul McVites',
+                author: 'Nishant Singh',
                 date: '2014-09-05T17:57:28.556094Z'
             },
             {
                 rating: 3,
-                comment: 'Eat it, just eat it!',
-                author: 'Michael Jaikishan',
+                comment: 'Eat it, just eat it!I dont like it',
+                author: 'Subhojeet Bhattacharjee',
                 date: '2015-02-13T17:57:28.556094Z'
             },
             {
                 rating: 4,
                 comment: 'Ultimate, Reaching for the stars!',
-                author: 'Ringo Starry',
+                author: 'Shreyansh Pathak',
                 date: '2013-12-02T17:57:28.556094Z'
             },
             {
@@ -47,8 +47,8 @@ export const DISHES: Dish[] = [
     },
     {
         id: '1',
-        name: 'Zucchipakoda',
-        image: '/assets/images/zucchipakoda.png',
+        name: 'Paneer Pakoda',
+        image: './assets/images/zucchipakoda.png',
         category: 'appetizer',
         featured: false,
         label: '',
@@ -57,26 +57,26 @@ export const DISHES: Dish[] = [
         comments: [
             {
                 rating: 5,
-                comment: 'Imagine all the eatables, living in conFusion!',
-                author: 'John Lemon',
+                comment: 'Deep inside my heart i loved it, would definitely ask my GF to try it',
+                author: 'Shreyansh Pathak',
                 date: '2012-10-16T17:57:28.556094Z'
             },
             {
                 rating: 4,
-                comment: 'Sends anyone to heaven, I wish I could get my mother-in-law to eat it!',
-                author: 'Paul McVites',
+                comment: 'Good try but this is a complete mess, I like only Fish :)',
+                author: 'Subhojeet Bhattacharjee',
                 date: '2014-09-05T17:57:28.556094Z'
             },
             {
                 rating: 3,
-                comment: 'Eat it, just eat it!',
-                author: 'Michael Jaikishan',
+                comment: 'Sends anyone to heaven, I wish I could get my mother-in-law to eat it!',
+                author: 'Nishant Singh',
                 date: '2015-02-13T17:57:28.556094Z'
             },
             {
                 rating: 4,
                 comment: 'Ultimate, Reaching for the stars!',
-                author: 'Ringo Starry',
+                author: 'Pranjay Poddar',
                 date: '2013-12-02T17:57:28.556094Z'
             },
             {
@@ -89,8 +89,8 @@ export const DISHES: Dish[] = [
     },
     {
         id: '2',
-        name: 'Vadonut',
-        image: '/assets/images/vadonut.png',
+        name: 'Donut',
+        image: './assets/images/vadonut.png',
         category: 'appetizer',
         featured: false,
         label: 'New',
@@ -99,26 +99,26 @@ export const DISHES: Dish[] = [
         comments: [
             {
                 rating: 5,
-                comment: 'Imagine all the eatables, living in conFusion!',
-                author: 'John Lemon',
+                comment: 'Poor Guys, Imagine all the eatables, living in conFusion!',
+                author: 'AK47',
                 date: '2012-10-16T17:57:28.556094Z'
             },
             {
                 rating: 4,
                 comment: 'Sends anyone to heaven, I wish I could get my mother-in-law to eat it!',
-                author: 'Paul McVites',
+                author: 'Nishant Singh',
                 date: '2014-09-05T17:57:28.556094Z'
             },
             {
                 rating: 3,
                 comment: 'Eat it, just eat it!',
-                author: 'Michael Jaikishan',
+                author: 'Shreyansh Pathak',
                 date: '2015-02-13T17:57:28.556094Z'
             },
             {
                 rating: 4,
                 comment: 'Ultimate, Reaching for the stars!',
-                author: 'Ringo Starry',
+                author: 'Pranjay Poddar',
                 date: '2013-12-02T17:57:28.556094Z'
             },
             {
@@ -131,8 +131,8 @@ export const DISHES: Dish[] = [
     },
     {
         id: '3',
-        name: 'ElaiCheese Cake',
-        image: '/assets/images/elaicheesecake.png',
+        name: 'Cheese Cake',
+        image: './assets/images/elaicheesecake.png',
         category: 'dessert',
         featured: false,
         label: '',
