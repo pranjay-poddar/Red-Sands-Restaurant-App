@@ -5,20 +5,20 @@
             <div fxFlex="100" fxFlexOffset="50px">
                 <h4 style="margin-left: 30px;">Links</h4>
                 <mat-list>
-                    <mat-list-item class="list"><a mat-button>Home</a></mat-list-item>
-                    <mat-list-item class="list"><a mat-button>About</a></mat-list-item>
-                    <mat-list-item class="list"><a mat-button>Menu</a></mat-list-item>
-                    <mat-list-item class="list"><a mat-button>Contact</a></mat-list-item>
+                    <mat-list-item routerLink="home" class="list"><a mat-button routerLinkActive="itemActive">Home</a></mat-list-item>
+                    <mat-list-item routerLink="about" class="list"><a mat-button routerLinkActive="itemActive">About</a></mat-list-item>
+                    <mat-list-item routerLink="menu" class="list"><a mat-button routerLinkActive="itemActive">Menu</a></mat-list-item>
+                    <mat-list-item routerLink="contact" class="list"><a mat-button routerLinkActive="itemActive">Contact</a></mat-list-item>
                 </mat-list>
             </div>
             <div fxFlex="100">
                 <h4>Our Address</h4>
                 <address style="font-size: 100%;font-weight: 400;">
               Srm University <br> Chennai<br> India<br>
-              <i class="fa fa-phone"></i>: +916263804262<br>
+              <a href="tel:6263804262"><i class="fa fa-phone"></i> : Phone<br></a>
             
               <i class="fa fa-envelope"></i>:
-              <a href="mailto:pranjaypoddar@gmail.com">pranjaypoddar@gmail.com</a>
+              <a href="mailto:pranjaypoddar@gmail.com">Email</a>
             </address>
             </div>
         </div>

@@ -1,10 +1,15 @@
 $lt-gray: #ddd;
 $background-dark: #512DA8;
-$background-light: #9575CD;
-$background-pale: #D1C4E9;
+$background-light:#212221;
+$background-pale:#212221;
+;
 @mixin zero-margin($pad-up-down, $pad-left-right) {
     margin: 0px auto;
     padding: $pad-up-down $pad-left-right;
+}
+
+.itemActive {
+    background: rgb(114, 114, 114);
 }
 
 address {
@@ -12,12 +17,18 @@ address {
 }
 
 .list {
-    color: black;
+    color: white;
 }
 
 .footer {
     background-color: $background-pale;
     @include zero-margin(20px, 0px);
+    color: #fff;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
 }
 
 .btn-github {

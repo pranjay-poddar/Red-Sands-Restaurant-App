@@ -13,3 +13,20 @@ $background-pale: #D1C4E9;
     color: floralwhite;
     min-height: 150px;
 }
+
+.jumbotron h1 {
+    font-size: 250%;
+    font-weight: 550;
+    text-transform: uppercase;
+    color: black;
+}
+
+.jumbotron p {
+    font-size: 130%;
+    line-height: 130%;
+    color: rgb(233, 233, 233);
+}
+
+.itemActive {
+    background: rgb(95, 10, 173);
+}
