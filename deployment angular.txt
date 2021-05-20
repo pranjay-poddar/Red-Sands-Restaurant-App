@@ -1,0 +1,3 @@
+1) npm install -g angular-cli-ghpages
+2) ng build --prod --base-href "https://pranjay-poddar.github.io/Red-Sands-Restaurant-App/"
+3) ngh --dir dist/learning
