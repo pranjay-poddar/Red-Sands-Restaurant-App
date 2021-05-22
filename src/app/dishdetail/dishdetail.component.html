@@ -23,16 +23,15 @@
     <div fxFlex="40">
         <div class="container" *ngIf="dish" fxLayout="column" fxLayoutGap="10px">
             <h2 style="font-weight: bold;">COMMENTS</h2>
-            <mat-list fxFlex *ngIf="dish">
-                <mat-list-item *ngFor="let comment of dish.comments">
-                    <p matLine>{{comment.comment}}</p>
-                    <p matLine> {{comment.rating}} Stars</p>
-                    <p matLine> -- {{comment.author}} {{comment.date | date}}</p>
-                    <p matLine>
-                        <span>  </span>
-                    </p>
-                </mat-list-item>
-            </mat-list>
+            <div fxFlex *ngIf="dish">
+                <div *ngFor="let comment of dish.comments">
+                    <span>{{comment.comment}}</span><br>
+                    <span>{{comment.rating}} Stars</span><br>
+                    <span> -- {{comment.author}} {{comment.date | date}}</span><br>
+                    <br><br>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
