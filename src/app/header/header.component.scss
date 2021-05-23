@@ -7,6 +7,23 @@ $background-pale: #D1C4E9;
     padding: $pad-up-down $pad-left-right;
 }
 
+.tp-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+}
+
+.tp-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100px;
+}
+
 .jumbotron {
     @include zero-margin(70px, 30px);
     background: $background-light;
@@ -29,4 +46,22 @@ $background-pale: #D1C4E9;
 
 .itemActive {
     background: rgb(95, 10, 173);
+}
+
+@media (max-width: 450px) {
+    #nav-logo {
+        display: none;
+    }
+    .flex-spacer {
+        flex: 0.5 0.5 auto;
+        padding: 3px;
+    }
+    .mat-button,
+    .mat-icon-button,
+    .mat-stroked-button,
+    .mat-flat-button {
+        padding: 0px 0px !important;
+        font-size: 12px;
+        line-height: 30px;
+    }
 }

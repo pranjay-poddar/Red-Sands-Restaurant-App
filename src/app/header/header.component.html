@@ -1,9 +1,11 @@
 <mat-toolbar color="primary">
-    <span><img src="./assets/images/logo.png" height=30 width=41></span>
+    <span><img id="nav-logo" src="./assets/images/logo.png" height=30 width=41></span>
     <a mat-button routerLink="home" routerLinkActive="itemActive"><span class="fa fa-home fa-lg"></span> Home</a>
     <a mat-button routerLink="about" routerLinkActive="itemActive"><span class="fa fa-info fa-lg"></span> About</a>
     <a mat-button routerLink="menu" routerLinkActive="itemActive"><span class="fa fa-list fa-lg"></span> Menu</a>
     <a mat-button routerLink="contact" routerLinkActive="itemActive"><span class="fa fa-address-card fa-lg"></span> Contact</a>
+    <span class="flex-spacer"></span>
+    <a mat-button (click)="openLoginForm()" routerLinkActive="itemActive"><span class="fa fa-sign-in fa-lg" aria-hidden="true"></span> Login</a>
 </mat-toolbar>
 <div class="container jumbotron" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign.xs="start center" fxLayoutAlign.sm="start center" fxLayoutAlign.gt-sm="center center" fxLayoutGap="10px">
     <div fxFlex fxFlex.gt-sm="70%">

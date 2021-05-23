@@ -6,9 +6,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDialogModule } from'@angular/material/dialog';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
@@ -19,6 +23,9 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +35,8 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -39,12 +47,21 @@ import { HomeComponent } from './home/home.component';
     MatCardModule,
     MatButtonModule,
     MatGridListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule,
+    MatSidenavModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule
+
   ],
   providers: [
     DishService,
     LeaderService
   ],
+  entryComponents:[LoginComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
