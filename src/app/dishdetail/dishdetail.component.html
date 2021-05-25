@@ -20,6 +20,7 @@
             </mat-card-actions>
         </mat-card>
     </div>
+
     <div fxFlex="40">
         <div class="container" *ngIf="dish" fxLayout="column" fxLayoutGap="10px">
             <h2 style="font-weight: bold;">COMMENTS</h2>
@@ -34,5 +35,10 @@
             </div>
         </div>
     </div>
+
+</div>
+<div [hidden]="dish">
+    <mat-spinner></mat-spinner>
+    <h4>Loading . . . Please Wait</h4>
 </div>
 <br>

@@ -48,9 +48,9 @@
             </blockquote>
         </mat-card>
     </div>
-    <div fxFlex>
-        <h2 style="font-weight: 700;">Corporate Leadership</h2>
 
+    <h2 style="font-weight: 700;">Corporate Leadership</h2>
+    <div *ngIf="leaders">
         <div *ngFor="let leader of leaders">
             <div class="leader">
                 <div>
@@ -63,3 +63,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div [hidden]="leaders">
+        <mat-spinner mode="indeterminate"></mat-spinner>
+        <h4>Loading . . . Please Wait</h4>
+    </div>
