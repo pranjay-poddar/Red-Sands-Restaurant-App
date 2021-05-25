@@ -6,7 +6,7 @@
         <mat-card>
             <mat-card-header>
                 <mat-card-title *ngIf="dish">
-                    <h2 style="font-weight: bold;">{{ dish.name | uppercase }}</h2>
+                    <h2 *ngIf="dish" style="font-weight: bold;">{{ dish.name | uppercase }}</h2>
                 </mat-card-title>
             </mat-card-header>
             <img height="300px" mat-card-image src={{dish.image}} alt={{dish.name}}>

@@ -8,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-lead:any;
+leaders:any;
   constructor(private leaderService:LeaderService) { }
 
   ngOnInit(): void {
-    this.lead = this.leaderService.getleaders();
+    this.leaderService.getleaders()
+    .then(leaders => this.leaders = leaders);
   }
 
 }
