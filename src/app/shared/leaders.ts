@@ -2,23 +2,23 @@ import { Leader } from './leader'
 export const LEADERS :Leader[] = [
     {
       id: '0',
-      name: 'Peter Pan',
+      name: 'Alberto Pan',
       image: './assets/images/alberto.png',
       designation: 'Chief Epicurious Officer',
       abbr: 'CEO',
       featured: false,
       // tslint:disable-next-line:max-line-length
-      description: 'Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother\'s wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which The Frying Pan became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.'
+      description: 'Our CEO, Alberto, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother\'s wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which The Frying Pan became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.'
     },
     {
       id: '1',
-      name: 'Dhanasekaran Witherspoon',
+      name: 'Ron Witherspoon',
       image: './assets/images/ron.png',
       designation: 'Chief Food Officer',
       abbr: 'CFO',
       featured: false,
       // tslint:disable-next-line:max-line-length
-      description: 'Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, Everything that runs, wins, and everything that stays, pays!'
+      description: 'Our CFO, Ron, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, Everything that runs, wins, and everything that stays, pays!'
     },
     {
       id: '2',
@@ -32,8 +32,8 @@ export const LEADERS :Leader[] = [
     },
     {
       id: '3',
-      name: 'Alberto Somayya',
-      image: './assets/images/alberto.png',
+      name: 'Peter Somayya',
+      image: './assets/images/ondrella.png',
       designation: 'Executive Chef',
       abbr: 'EC',
       featured: true,
