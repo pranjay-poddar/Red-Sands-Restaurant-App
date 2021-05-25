@@ -22,8 +22,8 @@ export const LEADERS :Leader[] = [
     },
     {
       id: '2',
-      name: 'Agumbe Tang',
-      image: './assets/images/alberto.png',
+      name: 'Lisa Tang',
+      image: './assets/images/lisa.png',
       designation: 'Chief Taste Officer',
       abbr: 'CTO',
       featured: false,
