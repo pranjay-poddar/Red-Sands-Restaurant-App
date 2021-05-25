@@ -13,7 +13,7 @@ export const LEADERS :Leader[] = [
     {
       id: '1',
       name: 'Dhanasekaran Witherspoon',
-      image: './assets/images/alberto.png',
+      image: './assets/images/ron.png',
       designation: 'Chief Food Officer',
       abbr: 'CFO',
       featured: false,
