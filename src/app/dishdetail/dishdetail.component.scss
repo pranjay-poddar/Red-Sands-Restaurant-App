@@ -14,6 +14,24 @@ mat-spinner {
     margin: 0 auto;
 }
 
+.mat-card>.mat-card-actions:last-child {
+    margin-bottom: -8px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
 h4 {
     text-align: center;
+}
+
+@media(max-width:550px) {
+    .mat-button,
+    .mat-icon-button,
+    .mat-stroked-button,
+    .mat-flat-button {
+        min-width: 30px;
+        line-height: 30px;
+        padding: 0 5px;
+    }
 }

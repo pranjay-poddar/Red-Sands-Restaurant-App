@@ -60,6 +60,11 @@ body {
     flex: 1 1 auto;
 }
 
+.mat-progress-spinner circle,
+.mat-spinner circle {
+    stroke: #876ab9;
+}
+
 .mat-button,
 .mat-icon-button,
 .mat-stroked-button,
