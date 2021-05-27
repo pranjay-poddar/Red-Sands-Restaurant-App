@@ -13,7 +13,7 @@ leaders:any;
 
   ngOnInit(): void {
     this.leaderService.getleaders()
-    .then(leaders => this.leaders = leaders);
+    .subscribe(leaders => this.leaders = leaders);
   }
 
 }

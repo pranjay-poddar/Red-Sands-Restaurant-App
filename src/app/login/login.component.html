@@ -8,7 +8,7 @@
 
 <form novalidate #loginForm="ngForm" (ngSubmit)="OnSubmit()">
     <mat-dialog-content>
-        <p>
+        <p class="first-para">
             <mat-form-field>
                 <input matInput placeholder="Username" #username="ngModel" type="text" [(ngModel)]="user.username" name="username" required>
                 <mat-error *ngIf="username.errors?.required">Username is required</mat-error>
