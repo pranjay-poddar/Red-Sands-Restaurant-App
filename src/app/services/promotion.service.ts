@@ -11,15 +11,15 @@ export class PromotionService {
 
   constructor() { }
   getPromotions(): Observable<Promotion[]> {
-    return of(PROMOTIONS).pipe(delay(2000));
+    return of(PROMOTIONS).pipe(delay(500));
   }
 
   getPromotion(id: string):Observable<Promotion> {
  
-    return of(PROMOTIONS.filter((promotion) => (promotion.id === id))[0]).pipe(delay(2000));
+    return of(PROMOTIONS.filter((promotion) => (promotion.id === id))[0]).pipe(delay(500));
   }
 
   getFeaturedPromotion(): Observable<Promotion> {
-    return of(PROMOTIONS.filter((promotion) => promotion.featured)[0]).pipe(delay(2000));
+    return of(PROMOTIONS.filter((promotion) => promotion.featured)[0]).pipe(delay(500));
   }
 }
