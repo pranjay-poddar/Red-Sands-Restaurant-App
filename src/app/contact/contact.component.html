@@ -39,23 +39,23 @@
 
                 <mat-form-field class="half-width">
                     <input matInput formControlName="firstname" placeholder="First Name" type="text">
-                    <mat-error *ngIf="checkError('firstname', 'required')">First Name is required</mat-error>
+                    <mat-error *ngIf="(formErrors.firstname)">{{formErrors.firstname}}</mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="half-width">
                     <input matInput formControlName="lastname" placeholder="Last Name" type="text">
-                    <mat-error *ngIf="checkError('lastname', 'required')">Last Name is required</mat-error>
+                    <mat-error *ngIf="(formErrors.lastname)">{{formErrors.lastname}}</mat-error>
                 </mat-form-field>
 
             </p>
             <p>
                 <mat-form-field class="half-width">
-                    <input matInput formControlName="telnum" placeholder="Tel. Number" type="tel">
-                    <mat-error *ngIf="checkError('telnum', 'required')">Tel. No. is required</mat-error>
+                    <input matInput formControlName="telnum" placeholder="Tel. Number" type="number">
+                    <mat-error *ngIf="(formErrors.telnum)">{{formErrors.telnum}}</mat-error>
                 </mat-form-field>
                 <mat-form-field class="half-width">
                     <input matInput formControlName="email" placeholder="Email" type="email">
-                    <mat-error *ngIf="checkError('email', 'required')">Email is required</mat-error>
+                    <mat-error *ngIf="(formErrors.email)">{{formErrors.email}}</mat-error>
                 </mat-form-field>
             </p>
             <table class="form-size">
@@ -73,7 +73,7 @@
             <p>
                 <mat-form-field class="full-width">
                     <textarea matInput formControlName="message" placeholder="Your Feedback" rows=12></textarea>
-                    <mat-error *ngIf="checkError('message', 'required')">Feedback is required</mat-error>
+                    <!-- <mat-error *ngIf="checkError('message', 'required')">Feedback is required</mat-error> -->
                 </mat-form-field>
             </p>
             <button type="submit" mat-button [disabled]="!feedbackForm.valid" class="background-primary button text-floral-white">Submit</button>
