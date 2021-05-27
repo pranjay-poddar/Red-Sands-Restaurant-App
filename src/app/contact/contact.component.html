@@ -73,7 +73,7 @@
             <p>
                 <mat-form-field class="full-width">
                     <textarea matInput formControlName="message" placeholder="Your Feedback" rows=12></textarea>
-                    <!-- <mat-error *ngIf="checkError('message', 'required')">Feedback is required</mat-error> -->
+                    <mat-error *ngIf="checkError('message', 'required')">Feedback is required</mat-error>
                 </mat-form-field>
             </p>
             <button type="submit" mat-button [disabled]="!feedbackForm.valid" class="background-primary button text-floral-white">Submit</button>

@@ -25,6 +25,25 @@ h4 {
     text-align: center;
 }
 
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: 95%;
+}
+
+form {
+    background: #5a5a5a;
+    border-radius: 5px;
+    padding: 5%;
+    width: 80%;
+}
+
+.button {
+    margin-left: 40%;
+}
+
 @media(max-width:550px) {
     .mat-button,
     .mat-icon-button,

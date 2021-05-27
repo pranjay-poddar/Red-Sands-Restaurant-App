@@ -34,14 +34,38 @@
                     <span>{{comment.comment}}</span><br>
                     <span>{{comment.rating}} Stars</span><br>
                     <span> -- {{comment.author}} {{comment.date | date}}</span><br>
-                    <br><br>
-
+                    <br>
                 </div>
+                <!-- <span>{{commentForm[0].value | json}}</span><br> -->
+                <span>{{commentForm.value.comment | json}}</span><br>
+                <span>{{commentForm.value.rating}} Stars</span><br>
+                <span> -- {{commentForm.value.Name | json}}</span><br>
+                <br>
             </div>
-        </div>
-    </div>
 
+        </div>
+
+
+        <form novalidate [formGroup]="commentForm" #fform="ngForm" (ngSubmit)="onSubmit()">
+            <p>
+
+                <mat-form-field class="half-width">
+                    <input matInput formControlName="Name" placeholder="Name" type="text">
+                    <mat-error *ngIf="(formErrors.Name)">{{formErrors.Name}}</mat-error>
+                </mat-form-field>
+            </p>
+            <mat-slider formControlName="rating" thumbLabel [displayWith]="formatLabel" tickInterval="1" step="1" min="1" max="5" aria-label="units" value="5"></mat-slider>
+            <p>
+                <mat-form-field class="half-width">
+                    <input matInput formControlName="comment" placeholder="Your Comment" type="text">
+                    <mat-error *ngIf="(formErrors.comment)">{{formErrors.comment}}</mat-error>
+                </mat-form-field>
+            </p>
+            <button type="submit" mat-button [disabled]="!commentForm.valid" class="background-primary button text-floral-white">Submit</button>
+        </form>
+    </div>
 </div>
+
 <div [hidden]="dish">
     <mat-spinner></mat-spinner>
     <h4>Loading . . . Please Wait</h4>

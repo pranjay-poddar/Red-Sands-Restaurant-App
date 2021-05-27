@@ -66,9 +66,9 @@ this.onValueChanged(); // (re)set validation messages now
 }
   ngOnInit(): void {
   }
-  // public checkError = (controlName: string, errorName: string) => {
-  //   return this.feedbackForm.controls[controlName].hasError(errorName);
-  // }
+  public checkError = (controlName: string, errorName: string) => {
+    return this.feedbackForm.controls[controlName].hasError(errorName);
+  }
 
   onSubmit() {
     // console.warn(this.feedbackForm.value);

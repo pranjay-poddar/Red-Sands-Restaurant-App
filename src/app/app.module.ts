@@ -16,6 +16,7 @@ import { MatDialogModule } from'@angular/material/dialog';
 import { MatSelectModule } from'@angular/material/select';
 import { MatSlideToggleModule } from'@angular/material/slide-toggle';
 import 'hammerjs';
+import { MatSliderModule } from '@angular/material/slider';
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { DishService } from './services/dish.service';
@@ -62,6 +63,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatSlideToggleModule,
     MatSelectModule,
     MatProgressSpinnerModule,
+    MatSliderModule
   ],
   providers: [
     DishService,
