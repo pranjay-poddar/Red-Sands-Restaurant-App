@@ -1,3 +1,5 @@
+import { Comment } from './../shared/comment';
+import { DISHES } from './../shared/dishes';
 import { Component, OnInit ,ViewChild} from '@angular/core';
 import { Params, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -13,13 +15,14 @@ import { FormBuilder,Validators} from '@angular/forms';
 
 export class DishdetailComponent implements OnInit {
   commentForm:any;
-  comment:any;
+  commentDisplay:any;
+  authorDisplay:any;
+  ratingDisplay:any;
   dish : any;
   dishIds!: string[];
   prev!: string;
   next!: string;
-  nameDisplay!:string;
-  commentDisplay!:string;
+  
   @ViewChild('fform') commentFormDirective:any;
   constructor(private dishservice: DishService,
     private route: ActivatedRoute,
@@ -39,6 +42,7 @@ export class DishdetailComponent implements OnInit {
     return value;
   }
 
+
   createForm(){
     this.commentForm = this.fb.group({
     Name : ['', [Validators.required,Validators.minLength(2),Validators.maxLength(25)]],
@@ -46,14 +50,9 @@ export class DishdetailComponent implements OnInit {
     rating: [5]
     });
     this.commentForm.valueChanges.subscribe((data:any) => this.onValueChanged(data));
-    this.commentForm.valueChanges.subscribe((data2:any) => this.getval(data2));
-  
   this.onValueChanged(); // (re)set validation messages now
   }
-  getval(data2?:any){
-  this.nameDisplay= data2.Name.value;
-  }
-
+ 
   
   formErrors = {
     'Name': '',
@@ -92,23 +91,17 @@ export class DishdetailComponent implements OnInit {
       }
     }
   }
-  onSubmit() {
-    // console.warn(this.commentForm.value);
-    // console.log(this.commentForm);
-    // this.commentForm.reset();
-    this.comment = this.commentForm.value;
-    console.log(this.comment);
+  onSubmit() { 
+    this.commentDisplay = this.commentForm.value;
+    this.commentDisplay.date = new Date().toISOString();
+    this.dish.comments.push(this.commentDisplay);
     this.commentForm.reset({
       Name: '',
       comment: '',
       rating: 5
     });
-    // this.commentFormDirective.resetForm();
+    this.commentFormDirective.resetForm();
   }
-
-
-
-
 
   setPrevNext(dishId: string) {
     const index = this.dishIds.indexOf(dishId);
