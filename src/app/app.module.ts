@@ -1,3 +1,4 @@
+import { HighlightDirective } from './directives/directives/highlight.directive';
 import { PromotionService } from './services/promotion.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -36,6 +37,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { baseURL } from './shared/baseurl';
 import { ProcessHttpmsgService } from "./services/process-httpmsg.service";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +48,8 @@ import { ProcessHttpmsgService } from "./services/process-httpmsg.service";
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
