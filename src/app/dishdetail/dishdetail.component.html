@@ -9,7 +9,7 @@
                     <h2 *ngIf="dish" style="font-weight: bold;">{{ dish.name | uppercase }}</h2>
                 </mat-card-title>
             </mat-card-header>
-            <img height="400px" mat-card-image src={{dish.image}} alt={{dish.name}}>
+            <img height="400px" mat-card-image src="{{BaseURL+dish.image}}" alt={{dish.name}}>
             <mat-card-content>
                 <p>{{ dish.description }}</p>
             </mat-card-content>
@@ -37,7 +37,7 @@
                     <br>
                 </div>
             </div>
-            <div>
+            <div *ngIf="commentForm.value.author || commentForm.value.comment ">
                 <span>{{commentForm.value.comment }}</span><br>
                 <span>{{commentForm.value.rating }} Stars</span><br>
                 <span> -- {{commentForm.value.author }}</span><br>

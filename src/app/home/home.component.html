@@ -7,7 +7,7 @@
                 <h3>{{dish.name | uppercase}}</h3>
             </mat-card-title>
         </mat-card-header>
-        <img height="320px" mat-card-image src={{dish.image}} alt={{dish.name}}>
+        <img height="320px" mat-card-image src="{{ BaseURL+dish.image }}" alt={{dish.name}}>
         <mat-card-content>
             <p class="description">{{dish.description}}
             </p>
