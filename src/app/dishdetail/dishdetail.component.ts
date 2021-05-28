@@ -45,7 +45,7 @@ export class DishdetailComponent implements OnInit {
 
   createForm(){
     this.commentForm = this.fb.group({
-    Name : ['', [Validators.required,Validators.minLength(2),Validators.maxLength(25)]],
+    author : ['', [Validators.required,Validators.minLength(2),Validators.maxLength(25)]],
     comment : ['',[Validators.required,Validators.minLength(2),Validators.maxLength(80)]],
     rating: [5]
     });
@@ -55,13 +55,13 @@ export class DishdetailComponent implements OnInit {
  
   
   formErrors = {
-    'Name': '',
+    'author': '',
     'comment': '',
     'rating':''
   };
 
   validationMessages = {
-    'Name': {
+    'author': {
       'required':      'Name is required.',
       'minlength':     'Name must be at least 2 characters long.',
       'maxlength':     'Name cannot be more than 25 characters long.'
@@ -94,6 +94,7 @@ export class DishdetailComponent implements OnInit {
   onSubmit() { 
     this.commentDisplay = this.commentForm.value;
     this.commentDisplay.date = new Date().toISOString();
+    console.log(this.commentDisplay);
     this.dish.comments.push(this.commentDisplay);
     this.commentForm.reset({
       Name: '',

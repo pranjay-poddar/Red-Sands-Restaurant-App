@@ -40,7 +40,7 @@
             <div>
                 <span>{{commentForm.value.comment }}</span><br>
                 <span>{{commentForm.value.rating }} Stars</span><br>
-                <span> -- {{commentForm.value.Name }}</span><br>
+                <span> -- {{commentForm.value.author }}</span><br>
                 <br>
             </div>
 
@@ -52,8 +52,8 @@
             <p>
 
                 <mat-form-field class="half-width">
-                    <input matInput formControlName="Name" placeholder="Name" type="text">
-                    <mat-error *ngIf="(formErrors.Name)">{{formErrors.Name}}</mat-error>
+                    <input matInput formControlName="author" placeholder="Name" type="text">
+                    <mat-error *ngIf="(formErrors.author)">{{formErrors.author}}</mat-error>
                 </mat-form-field>
             </p>
             <mat-slider formControlName="rating" thumbLabel [displayWith]="formatLabel" tickInterval="1" step="1" min="1" max="5" aria-label="units" value="5"></mat-slider>
