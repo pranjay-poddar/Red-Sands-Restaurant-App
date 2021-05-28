@@ -64,7 +64,11 @@
             </div>
         </div>
     </div>
-    <div [hidden]="leaders">
+    <div [hidden]="leaders || leaderErrMess">
         <mat-spinner mode="indeterminate"></mat-spinner>
         <h4>Loading . . . Please Wait</h4>
+    </div>
+    <div fxFlex *ngIf="leaderErrMess" [@expand]>
+        <h2 style="text-align: center;">Error</h2>
+        <h4>{{leaderErrMess}}</h4>
     </div>
