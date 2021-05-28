@@ -34,7 +34,7 @@
         <h3 style="font-size: 160%;font-weight: 500;text-align: center;">Send Us Your Feedback</h3>
         <!-- <p>{{ feedbackForm.value | json }} {{ feedbackForm.status | json }}</p> -->
 
-        <form novalidate [formGroup]="feedbackForm" #fform="ngForm" (ngSubmit)="onSubmit()">
+        <form novalidate [formGroup]="feedbackForm" #fform="ngForm" *ngIf="formview==true" (ngSubmit)="onSubmit()">
             <p>
 
                 <mat-form-field class="half-width">
@@ -78,5 +78,16 @@
             </p>
             <button type="submit" mat-button [disabled]="!feedbackForm.valid" class="background-primary button text-floral-white">Submit</button>
         </form>
+    </div>
+    <div *ngIf="submitted" [@expand]>
+        <h3 style="text-align: center;">Your Submission</h3>
+        <p style="text-align: center;">
+            First Name: {{ feedback.firstname }} <br /> Last Name: {{ feedback.lastname }} <br /> Tel. Number: {{ feedback.telnum }} <br /> Email: {{ feedback.email }} <br /> Contact You?: {{ feedback.agree }} <br /> How?: {{ feedback.contacttype }} <br
+            /> Feedback: {{ feedback.message }} <br />
+        </p>
+    </div>
+    <div *ngIf="submitting">
+        <h3 style="text-align: center;">Submitting</h3>
+        <mat-spinner></mat-spinner>
     </div>
 </div>

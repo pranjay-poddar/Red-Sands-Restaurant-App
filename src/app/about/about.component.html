@@ -54,7 +54,7 @@
         <div *ngFor="let leader of leaders" [@expand]>
             <div class="leader">
                 <div>
-                    <img src={{leader.image}} height="50px" width="50px" style="border-radius: 50%">
+                    <img src="{{BaseURL + leader.image}}" height="50px" width="50px" style="border-radius: 50%">
                 </div>
                 <div fxFlex="95" fxFlexOffset="10px">
                     <span>{{leader.name}}</span> <span style="font-weight: bold;"> {{leader.abbr}}</span><br>

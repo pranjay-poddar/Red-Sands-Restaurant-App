@@ -2,7 +2,7 @@ import { ContactType } from './../shared/feedback';
 import { Component, OnInit,ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { flyInOut, expand } from '../animations/animation';
-
+import { FeedbackService } from '../services/feedback.service';
 // import { Feedback } from '../shared/feedback';
 import { FormControl } from '@angular/forms';
 // @ViewChild('fform') feedbackFormDirective;
@@ -25,9 +25,14 @@ export class ContactComponent implements OnInit  {
   
   feedbackForm:any;
   feedback:any;
+  subfeedback:any;
+  submitting: boolean = false;
+  submitted: boolean = false;
+  formview:boolean=true;
+  errMess:any;
   contactType = ContactType;
   @ViewChild('fform') feedbackFormDirective:any;
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder,private feedbackservice: FeedbackService,) { 
     this.createForm();
   }
 
@@ -84,8 +89,22 @@ this.onValueChanged(); // (re)set validation messages now
     // console.warn(this.feedbackForm.value);
     // console.log(this.feedbackForm);
     // this.feedbackForm.reset();
+    this.formview=false;
+    this.submitting=true;
     this.feedback = this.feedbackForm.value;
+    this.subfeedback = this.feedbackForm.value;
     console.log(this.feedback);
+    this.feedbackservice.submitFeedback(this.feedback)
+    .subscribe(submitted => {
+      this.submitting=false;
+      this.submitted=true;
+      //this.feedback = feedback; this.feedbackcopy = feedback;
+      setTimeout(()=> {
+        this.submitted = false;
+        this.formview = true;},5000);
+      },
+      errmess => { this.submitting = false; this.errMess = <any>errmess; }
+      );
     this.feedbackForm.reset({
       firstname: '',
       lastname: '',

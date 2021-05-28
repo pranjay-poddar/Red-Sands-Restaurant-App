@@ -224,5 +224,26 @@
       "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
     }
   ],
-  "feedback": []
+  "feedback": [
+    {
+      "firstname": "Pranjay",
+      "lastname": "Poddar",
+      "telnum": 9479758910,
+      "email": "pranjaypoddar@gmail.com",
+      "agree": null,
+      "contacttype": null,
+      "message": "Nice restaurant loved it!",
+      "id": 1
+    },
+    {
+      "firstname": "Nishant",
+      "lastname": "Singh",
+      "telnum": 1263456789,
+      "email": "coolnishant@gmail.com",
+      "agree": true,
+      "contacttype": "Email",
+      "message": "Awesome dishes ...",
+      "id": 2
+    }
+  ]
 }

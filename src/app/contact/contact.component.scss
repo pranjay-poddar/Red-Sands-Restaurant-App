@@ -25,6 +25,10 @@
         margin-left: 45%;
     }
     
+    mat-spinner {
+        margin: 0 auto;
+    }
+    
     @media(max-width: 550px) {
         .button {
             margin-left: 38%;
